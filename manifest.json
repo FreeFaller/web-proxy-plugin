@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "proxy",
+    "version": "1.0",
+    "description": "请求代理Chrome插件",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "请求代理",
+        "default_popup": "proxy.html"
+    },
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "permissions": [
+        "storage",
+        "proxy",
+        "webRequest",
+        "webRequestBlocking",
+        "http://billing-dev.netease.com/*",
+        "http://localhost:8002/*"
+    ]
+}
